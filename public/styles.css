@@ -1,0 +1,71 @@
+/* Styles for the full-width container */
+.full-width-container {
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Optional: for some spacing between the sections */
+}
+
+/* Styles for the flex container */
+.flex-container {
+    display: flex; /* Enables flexbox */
+    justify-content: space-between; /* Positions the children (chart containers) with space between them */
+    flex-wrap: wrap; /* Allows the containers to wrap to the next line on smaller screens */
+}
+
+/* Styles for the individual chart containers within the flex container */
+.flex-container .container {
+    flex-basis: 48%; /* Slightly less than half the parent's width to account for padding/margin. Adjust as needed. */
+    box-sizing: border-box; /* Makes sure padding and border are included in the element's total width and height */
+}
+
+@media screen and (max-width: 768px) {
+    /* On smaller screens, the chart containers take full width */
+    .flex-container .container {
+        flex-basis: 100%;
+    }
+}
+
+
+
+body {
+    font-family: 'Roboto Mono', monospace;
+}
+/*  ### this failed so I implemented the background later*/
+body {
+    background-color: black;
+    color: #00ff41; /* The bright green, typical of the Matrix digital code color */
+    font-family: 'Courier New', Courier, monospace; /* This font family resembles old computer/console output */
+}
+
+/* Add a general green border for your canvas elements (charts) */
+canvas {
+    border: 1px solid #00ff41; /* Green border, matching the Matrix theme */
+}
+
+/* Style headers to stand out with the Matrix theme */
+h1 {
+    color: #00ff41;
+}
+
+/* If you have any buttons or interactive elements, style them as well */
+button {
+    background-color: #00ff41;
+    color: black;
+    border: none;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* Add any additional specific styling here */
+.container {
+    /* Additional styling, if needed, for the container class */
+}
+/* This rule sets the background of the whole page, including all divs, to black. */
+/* It's a forceful way to ensure the background is consistent everywhere. */
+html, body, #root, .container, canvas {
+    background-color: rgb(27, 26, 26); /* Universal black background for all elements */
+}
